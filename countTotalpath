@@ -1,0 +1,30 @@
+
+public class countTotalpath {
+    
+    public static int countTotalpath (int i,int j,int n,int m)
+            
+    {    
+        if(i==n || j==m)
+    {
+        return 0;
+    }
+        if(i== n-1 && j==m-1)
+        {
+            return 1;
+        }
+        // down
+    int downPath = countTotalpath(i+1,j,n,m);
+    int rightPath = countTotalpath(i,j+1,n,m);
+       int sum =   downPath + rightPath;
+       return sum;
+    }
+    
+    
+    public static void main(String[] args) {
+        int m=4,n=4;
+        int sum = countTotalpath(0,0,n,m);
+        System.out.println(sum);
+        
+    }
+    }
+
