@@ -1,0 +1,39 @@
+//import java.util.*;
+//
+//class ReverseString {
+//  public static void main(String[] args) {
+//  Scanner scan = new Scanner (System.in);
+//      System.out.println("enter the string");
+//String s = scan.nextLine();
+//for(int i=s.length()-1;i>=0;i--)
+//{
+//    
+//     System.out.print(s.charAt(i));
+//}
+//
+//}
+// 
+//    
+//}
+
+public class ReverseString
+{
+   public static void  ReverseString(String str,int idx)
+   {
+       if(idx==0)
+       {
+           System.out.println(str.charAt(idx));
+           return;
+       }
+       System.out.println(str.charAt(idx));
+       ReverseString(str,idx-1);
+   }
+   
+    public static void main(String[] args) {
+        String str = "AkBCDk";
+        ReverseString(str,str.length()-1);
+        
+        System.out.println(str.lastIndexOf('k'));
+    }
+   
+}
